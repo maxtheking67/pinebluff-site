@@ -1,0 +1,398 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Covered+By+Your+Grace&display=swap');
+
+@font-face {
+    font-family: "RartelFont";
+    src: url(../fonts/carbon.ttf);
+}
+
+/* Root Variables */
+:root {
+    --primary-bg: #141414;
+    --highlight: rgb(248, 248, 248);
+    --hover-color: #d6d3d3;
+    --text-light: aliceblue;
+    --text-dark: #141414;
+}
+
+/* General Styles */
+body {
+    overflow-x: hidden;
+    background-color: var(--primary-bg);
+    padding: 0;
+    margin: 0%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+blurred {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+
+
+p, h1 {
+    text-align: center;
+    font-family: 'Covered By Your Grace', cursive;
+    color: var(--text-light);
+}
+.gearshit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.gearpic {
+    width: 420px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 5px solid #fdfbfb;
+
+}
+
+.descgear {
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+}
+
+.backline {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.backlineshit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.backlinepic {
+    width: 420px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 5px solid #fdfbfb;
+}
+
+.descbackline {
+    font-size: 30px;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+}
+h1 {
+    text-shadow: 4px 1px #070707;
+    font-weight: 400;
+    font-size: 60px;
+    word-spacing: 7px;
+    text-transform: uppercase;
+}
+
+.tagline {
+    padding-top: 2%;
+}
+
+/* Buttons */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.btn-group .btn {
+    max-width: fit-content;
+    background-color: var(--highlight);
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 5vw;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+.btn-group .btn:hover {
+    background-color: var(--hover-color);
+    color: rgb(221, 214, 214);
+}
+
+/* Centering */
+.vertical-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Background Sections */
+.bg, .bg1, .text2, .text3, .text4, .text5, .text6, .text7 {
+    width: 100%;
+    position: relative;
+    height: 550px;
+    left: 0;
+    background-color: var(--text-dark);
+}
+
+.image {
+    width: 100%;
+    position: relative;
+    height: 550px;
+    left: 0;
+    background-color: var(--text-dark);
+}
+
+.text3 {
+    background-image: url("/assets/images/IMG_2918.JPG");
+    background-position: center;
+    background-size: cover;
+}
+
+.coverbg {
+    background-image: url("/assets/images/GEAR.jpg"); /* Ensure correct path */
+    background-size: cover;
+    background-position: center middle;
+    min-height: 0vh; /* Ensure it has height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -1; /* Send it behind other elements */
+    padding: 10%;
+}
+
+/* Images */
+
+.cover {
+    display: block;
+    filter: drop-shadow(5px 5px 0 rgb(236, 236, 236)) drop-shadow(-5px -5px 0 rgb(235, 233, 233));
+    padding: 2%;
+    max-width: 70vw; /* Prevents it from being too large */
+}
+
+
+/* Typography */
+.intro, .desc, .desc-ep, .desc-ep-tracks {
+    text-align: center;
+    margin-top: -1px;
+    text-shadow: 4px 1px #000;
+    color: var(--text-light);
+}
+
+.intro { font-size: 60px; }
+.desc { font-size: 50px; }
+.desc-ep, .desc-ep-tracks { font-size: 35px; }
+
+/* Links */
+a {
+    color: var(--highlight);
+    text-decoration: none;
+    transition: color 0.3s;
+    width: fit-content;
+}
+a:hover { color: var(--hover-color); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1a1b26; }
+::-webkit-scrollbar-thumb { background: #f5f3f3; }
+::-webkit-scrollbar-thumb:hover { background: var(--hover-color); }
+
+/* Responsive Styles */
+@media (max-width: 420px) {
+    .cover { width: 70%; position: relative; top: 80px; }
+    .text2 { top: -90px; }
+    .text4 { top: -5px; }
+    .text { top: -50px; }
+    .desc { line-height: 33px; position: relative; bottom: 20px; }
+    .epcover { width: 350px; }
+    .albumc { height: 200px; width: 200px; }
+}
+
+@media (max-width: 767px) {
+    a { display: block !important; }
+    .intro { font-size: 30px; margin: 3px; }
+}
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .gig-table {
+        width: 95%;
+        font-size: 16px;
+    }
+    .gig-table th, .gig-table td {
+        padding: 10px;
+    }
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* Prevent anything from causing horizontal scrolling */
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Logo / hero */
+    .coverbg {
+        padding: 15% 5%;
+        min-height: 250px;
+        background-position: center;
+    }
+
+    .cover {
+        width: 85%;
+        max-width: 400px;
+        padding: 0;
+    }
+
+    /* Intro text */
+    .intro {
+        font-size: 32px;
+        line-height: 1.1;
+        margin: 25px 15px 40px;
+        word-spacing: 2px;
+    }
+
+    /* Section headings */
+    .gear,
+    .backline {
+        font-size: 42px;
+        line-height: 1;
+        margin: 50px 15px 20px;
+        word-spacing: 3px;
+    }
+
+    /* =========================
+       RIG RUNDOWN
+       ========================= */
+
+    .gearshit {
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 15px 40px;
+    }
+
+    .gearpic {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        box-sizing: border-box;
+    }
+
+    .descgear {
+        width: 100%;
+        max-width: 420px;
+        font-size: 25px;
+        line-height: 1.35;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    /* =========================
+       BACKLINE RUNDOWN
+       ========================= */
+
+    .backlineshit {
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px 15px 50px;
+    }
+
+    .descbackline {
+        width: 100%;
+        max-width: 420px;
+        font-size: 25px;
+        line-height: 1.35;
+        text-align: left;
+        box-sizing: border-box;
+        order: 1;
+    }
+
+    .backlinepic {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        box-sizing: border-box;
+        order: 2;
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .contact,
+    .cw {
+        font-size: 18px;
+        word-break: break-word;
+    }
+}
+
+
+/* Smaller phones */
+@media (max-width: 480px) {
+
+    .coverbg {
+        min-height: 200px;
+        padding: 12% 5%;
+    }
+
+    .cover {
+        width: 90%;
+    }
+
+    .intro {
+        font-size: 28px;
+        margin: 20px 12px 35px;
+    }
+
+    .gear,
+    .backline {
+        font-size: 36px;
+        margin-top: 40px;
+    }
+
+    .gearshit,
+    .backlineshit {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .gearpic,
+    .backlinepic {
+        width: 100%;
+        border-width: 3px;
+    }
+
+    .descgear,
+    .descbackline {
+        font-size: 22px;
+        line-height: 1.4;
+    }
+}
