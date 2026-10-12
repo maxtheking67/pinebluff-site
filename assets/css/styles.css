@@ -58,11 +58,113 @@ p, h1 {
 
 }
 
-.descgear {
-    font-size: 30px;
-    line-height: 1.5;
-    text-align: left;
-    margin: 0;
+.descgear{
+font-family: 'JetBrains Mono', monospace;
+font-size: 20px;
+line-height: 1.8;
+text-align: left;
+color: aliceblue;
+}
+.descbackline {
+   font-family: 'JetBrains Mono', monospace;
+font-size: 20px;
+line-height: 1.8;
+text-align: left;
+color: aliceblue; 
+}
+/* Mobile */
+@media (max-width: 768px) {
+.descgear,
+.descbackline {
+font-size: 15px;
+line-height: 1.8;
+}
+}
+ 
+/* YouTube Thumbnail */
+.youtube-thumb {
+    display: block;
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    margin: 25px auto 0;
+    overflow: hidden;
+    border: 3px solid #f8f8f8;
+    border-radius: 4px;
+}
+
+.youtube-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.youtube-thumb:hover img {
+    transform: scale(1.03);
+    opacity: 0.7;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff0000;
+    font-size: 75px;
+    text-shadow: 2px 2px 8px #000;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .youtube-thumb {
+        width: 95%;
+    }
+
+    .play-button {
+        font-size: 55px;
+    }
+}
+
+.proof {
+    text-align: center;
+    padding: 60px 20px 80px;
+    margin-top: 40px;
+}
+
+.proof-title {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.proof-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 24px;
+}
+
+.proof-text a {
+    display: inline-block;
+    color: #f8f8f8;
+    transition: color 0.2s ease;
+}
+
+.proof-text a:hover {
+    color: #ff0000;
+}
+
+.proof-text i {
+    margin-left: 8px;
+}
+
+@media (max-width: 768px) {
+    .proof-title {
+        font-size: 38px;
+    }
+
+    .proof-text {
+        font-size: 18px;
+    }
 }
 
 .backline {
@@ -88,12 +190,7 @@ p, h1 {
     border: 5px solid #fdfbfb;
 }
 
-.descbackline {
-    font-size: 30px;
-    line-height: 1.5;
-    text-align: left;
-    margin: 0;
-}
+
 h1 {
     text-shadow: 4px 1px #070707;
     font-weight: 400;
@@ -321,15 +418,8 @@ a:hover { color: var(--hover-color); }
         padding: 20px 15px 50px;
     }
 
-    .descbackline {
-        width: 100%;
-        max-width: 420px;
-        font-size: 25px;
-        line-height: 1.35;
-        text-align: left;
-        box-sizing: border-box;
-        order: 1;
-    }
+/* Gear and backline list font */
+
 
     .backlinepic {
         width: 100%;
